@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controles premium para simulacion de vuelo y aeronaves RC de exhibicion tactica. Precision, ergonomia y telemetria para pilotos exigentes.">
+    <title>AEROTACT | Controles premium para simulacion y vuelo RC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <span><strong>ENVIO PRIORITARIO</strong> 48h en equipos seleccionados</span>
+        <span>Uso civil, simulacion y exhibicion RC</span>
+        <span>Soporte tecnico 7 dias</span>
+    </div>
+
+    <header class="site-header" id="top">
+        <a class="brand" href="#top" aria-label="Aerotact inicio">
+            <span class="brand-mark"></span>
+            <span class="brand-copy">AEROTACT<small>Flight Control Systems</small></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegacion principal">
+            <a href="#catalogo">Catalogo</a>
+            <a href="#ventajas">Ventajas</a>
+            <a href="#configurador">Configurador</a>
+            <a href="#confianza">Confianza</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="header-link" href="#configurador">Cotizar</a>
+            <button class="cart-button" id="cartButton" aria-label="Abrir carrito">
+                Pedido <span id="cartCount">0</span>
+            </button>
+            <button class="menu-button" aria-label="Abrir menu">Menu</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">PLATAFORMAS DE CONTROL PARA PILOTOS DE SIMULACION Y RC AVANZADO</p>
+                <h1 id="hero-title">Precision tactica,<br>compra <em>sin friccion.</em></h1>
+                <p class="hero-intro">
+                    Controles premium para cabinas de simulacion, aeronaves RC de exhibicion y entrenamiento tecnico.
+                    Una tienda pensada para elegir rapido, comparar mejor y despegar con confianza.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#catalogo">Ver controles</a>
+                    <a class="button button-secondary" href="#configurador">Armar mi setup</a>
+                </div>
+
+                <div class="trust-strip" aria-label="Puntos clave">
+                    <div><strong>0.7 ms</strong><span>latencia de respuesta</span></div>
+                    <div><strong>18 h</strong><span>autonomia maxima</span></div>
+                    <div><strong>3 anos</strong><span>garantia extendida</span></div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-grid"></div>
+                <div class="status-card">
+                    <span class="status-kicker">Seleccion del mes</span>
+                    <strong>Falcon T18 Command</strong>
+                    <p>Joysticks Hall sensor, 18 canales y perfil rapido para simuladores de jet.</p>
+                    <a href="#producto-falcon">Ver detalle</a>
+                </div>
+                <div class="hero-panel">
+                    <span>TELEMETRIA EN VIVO</span>
+                    <strong>Control fino. Lectura clara. Cierre rapido.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="logo-band" aria-label="Beneficios de compra">
+            <span>Calibracion previa incluida</span>
+            <span>Comparador visual de sticks</span>
+            <span>Pagos seguros</span>
+            <span>Asesoria de compatibilidad</span>
+        </section>
+
+        <section class="catalog-section" id="catalogo">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">CATALOGO DESTACADO</p>
+                    <h2>Encuentra el control ideal para tu <em>cabina</em> o pista.</h2>
+                </div>
+                <p class="section-note">
+                    Arquitectura de compra simple: pocas opciones, diferencias claras y llamadas a la accion visibles.
+                </p>
+            </div>
+
+            <div class="catalog-tools">
+                <div class="filters" role="group" aria-label="Filtrar productos">
+                    <button class="filter active" data-filter="all">Todos</button>
+                    <button class="filter" data-filter="sim">Simulacion</button>
+                    <button class="filter" data-filter="rc">RC avanzado</button>
+                    <button class="filter" data-filter="compact">Compactos</button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card featured" data-type="sim" id="producto-falcon">
+                    <div class="product-badge">Top ventas</div>
+                    <div class="product-info">
+                        <p class="product-code">SIM / T18</p>
+                        <h3>Falcon T18 Command</h3>
+                        <p>Panel robusto para pilotos que priorizan recorrido suave, memoria de perfiles y lectura instantanea.</p>
+                        <ul class="product-specs">
+                            <li>18 canales programables</li>
+                            <li>Sensores Hall duales</li>
+                            <li>Base antideslizante reforzada</li>
+                        </ul>
+                        <div class="product-buy">
+                            <strong>USD 429</strong>
+                            <button class="add-button" data-product="Falcon T18 Command">Anadir al pedido</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-type="rc">
+                    <div class="product-badge muted">RC avanzado</div>
+                    <div class="product-info">
+                        <p class="product-code">RC / V12</p>
+                        <h3>Vector V12 Range</h3>
+                        <p>Respuesta precisa y excelente agarre para aeronaves RC de exhibicion y maniobra tecnica.</p>
+                        <ul class="product-specs">
+                            <li>12 canales</li>
+                            <li>Telemetria integrada</li>
+                            <li>Modo vuelo rapido</li>
+                        </ul>
+                        <div class="product-buy">
+                            <strong>USD 289</strong>
+                            <button class="add-button" data-product="Vector V12 Range">Anadir al pedido</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-type="compact">
+                    <div class="product-badge muted">Compacto</div>
+                    <div class="product-info">
+                        <p class="product-code">CP / S08</p>
+                        <h3>Scout S8 Lite</h3>
+                        <p>Formato ligero para estaciones pequenas, entrenamiento y pilotos que quieren simplicidad sin perder precision.</p>
+                        <ul class="product-specs">
+                            <li>8 canales</li>
+                            <li>Diseno portable</li>
+                            <li>Bateria recargable USB-C</li>
+                        </ul>
+                        <div class="product-buy">
+                            <strong>USD 179</strong>
+                            <button class="add-button" data-product="Scout S8 Lite">Anadir al pedido</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="advantages-section" id="ventajas">
+            <div class="section-head compact">
+                <div>
+                    <p class="eyebrow">POR QUE FUNCIONA MEJOR</p>
+                    <h2>UX enfocada en <em>decision rapida</em>.</h2>
+                </div>
+            </div>
+
+            <div class="advantage-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Jerarquia clara</h3>
+                    <p>El usuario entiende de inmediato que vendes, para quien es y cual producto conviene primero.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Comparacion simple</h3>
+                    <p>Las fichas muestran diferencias concretas: canales, sensores, formato y escenario de uso.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Confianza visible</h3>
+                    <p>Garantia, soporte, compatibilidad y tiempos de entrega aparecen antes del momento de compra.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="config-section" id="configurador">
+            <div class="config-copy">
+                <p class="eyebrow">CONFIGURADOR EXPRESS</p>
+                <h2>Arma tu setup en menos de <em>2 minutos</em>.</h2>
+                <p>
+                    Esta seccion esta pensada para capturar leads y reducir dudas: tipo de uso, numero de canales,
+                    presupuesto y compatibilidad con simulador o aeronave RC.
+                </p>
+            </div>
+
+            <form class="config-card">
+                <label>
+                    Tipo de uso
+                    <select>
+                        <option>Simulacion de vuelo</option>
+                        <option>Aeronave RC avanzada</option>
+                        <option>Entrenamiento tecnico</option>
+                    </select>
+                </label>
+                <label>
+                    Canales deseados
+                    <select>
+                        <option>8 canales</option>
+                        <option>12 canales</option>
+                        <option>18 canales</option>
+                    </select>
+                </label>
+                <label>
+                    Presupuesto
+                    <select>
+                        <option>Hasta USD 200</option>
+                        <option>USD 200 a 350</option>
+                        <option>Mas de USD 350</option>
+                    </select>
+                </label>
+                <button type="button" class="button button-primary wide">Recibir recomendacion</button>
+            </form>
+        </section>
+
+        <section class="confidence-section" id="confianza">
+            <div class="confidence-copy">
+                <p class="eyebrow">COMPRA CON CONFIANZA</p>
+                <h2>Venta clara para productos tecnicos de alto valor.</h2>
+            </div>
+            <div class="confidence-list">
+                <div><strong>Compatibilidad guiada</strong><span>Ayuda para elegir software, receptor y accesorios.</span></div>
+                <div><strong>Garantia extendida</strong><span>Cobertura y reemplazo agil en referencias premium.</span></div>
+                <div><strong>Soporte postventa real</strong><span>Asistencia de calibracion y perfiles iniciales.</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="#top" aria-label="Aerotact inicio">
+            <span class="brand-mark"></span>
+            <span class="brand-copy">AEROTACT<small>Flight Control Systems</small></span>
+        </a>
+        <p>Disenado para simulacion, entrenamiento civil y modelismo aeronautico avanzado.</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
