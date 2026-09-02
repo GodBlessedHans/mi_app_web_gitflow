@@ -63,6 +63,17 @@
 
             <div class="hero-visual">
                 <div class="visual-grid"></div>
+                <div class="visual-showcase">
+                    <div class="showcase-photo" aria-label="Control de vuelo premium"></div>
+                    <div class="mini-stat">
+                        <span>24K</span>
+                        <small>pilotos</small>
+                    </div>
+                    <div class="floating-tag">
+                        <strong>Hall Sensor</strong>
+                        <small>respuesta lineal</small>
+                    </div>
+                </div>
                 <div class="status-card">
                     <span class="status-kicker">Seleccion del mes</span>
                     <strong>Falcon T18 Command</strong>
@@ -81,6 +92,27 @@
             <span>Comparador visual de sticks</span>
             <span>Pagos seguros</span>
             <span>Asesoria de compatibilidad</span>
+        </section>
+
+        <section class="feature-visuals" aria-label="Imágenes de productos destacados">
+            <article class="media-card media-card-one">
+                <div class="media-copy">
+                    <p class="eyebrow">SIMULACION</p>
+                    <h3>Cabinas de alta precision</h3>
+                </div>
+            </article>
+            <article class="media-card media-card-two">
+                <div class="media-copy">
+                    <p class="eyebrow">RC AVANZADO</p>
+                    <h3>Maniobra agresiva</h3>
+                </div>
+            </article>
+            <article class="media-card media-card-three">
+                <div class="media-copy">
+                    <p class="eyebrow">PORTATIL</p>
+                    <h3>Setups compactos</h3>
+                </div>
+            </article>
         </section>
 
         <section class="catalog-section" id="catalogo">
@@ -200,30 +232,56 @@
             <form class="config-card">
                 <label>
                     Tipo de uso
-                    <select>
-                        <option>Simulacion de vuelo</option>
-                        <option>Aeronave RC avanzada</option>
-                        <option>Entrenamiento tecnico</option>
+                    <select id="usageType">
+                        <option value="sim">Simulacion de vuelo</option>
+                        <option value="rc">Aeronave RC avanzada</option>
+                        <option value="train">Entrenamiento tecnico</option>
                     </select>
                 </label>
                 <label>
                     Canales deseados
-                    <select>
-                        <option>8 canales</option>
-                        <option>12 canales</option>
-                        <option>18 canales</option>
+                    <select id="channelSelect">
+                        <option value="8">8 canales</option>
+                        <option value="12" selected>12 canales</option>
+                        <option value="18">18 canales</option>
                     </select>
                 </label>
                 <label>
                     Presupuesto
-                    <select>
-                        <option>Hasta USD 200</option>
-                        <option>USD 200 a 350</option>
-                        <option>Mas de USD 350</option>
+                    <select id="budgetSelect">
+                        <option value="200">Hasta USD 200</option>
+                        <option value="350" selected>USD 200 a 350</option>
+                        <option value="500">Mas de USD 350</option>
                     </select>
                 </label>
-                <button type="button" class="button button-primary wide">Recibir recomendacion</button>
+                <button type="button" id="quoteButton" class="button button-primary wide">Recibir recomendacion</button>
             </form>
+
+            <aside class="order-panel" id="orderPanel" aria-live="polite">
+                <div class="order-panel-header">
+                    <p class="eyebrow">RESUMEN DEL PEDIDO</p>
+                    <button type="button" class="mini-button" id="clearCart">Vaciar</button>
+                </div>
+
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Aun no has seleccionado articulos.</p>
+                </div>
+
+                <div class="quote-box" id="recommendationBox">
+                    <span>Recomendacion</span>
+                    <strong id="recommendationTitle">Vector V12 Range</strong>
+                    <small id="recommendationText">Ideal para RC avanzado con 12 canales.</small>
+                </div>
+
+                <div class="totals">
+                    <div><span>Subtotal</span><strong id="subtotalValue">USD 0</strong></div>
+                    <div><span>Envio</span><strong id="shippingValue">USD 0</strong></div>
+                    <div><span>Descuento</span><strong id="discountValue">-USD 0</strong></div>
+                    <div class="total-line"><span>Total</span><strong id="totalValue">USD 0</strong></div>
+                </div>
+
+                <button type="button" class="button button-primary wide" id="checkoutButton">Solicitar cotizacion</button>
+            </aside>
         </section>
 
         <section class="confidence-section" id="confianza">
