@@ -320,6 +320,74 @@ h2 em {
         linear-gradient(180deg, #121c27 0%, #0c141d 100%);
 }
 
+.visual-showcase {
+    position: absolute;
+    inset: 2rem 2rem auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 22rem;
+    pointer-events: none;
+}
+
+.showcase-photo {
+    position: relative;
+    width: min(82%, 24rem);
+    height: 18rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.6rem;
+    background:
+        linear-gradient(180deg, rgba(10, 15, 20, 0.2), rgba(10, 15, 20, 0.72)),
+        url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.32);
+}
+
+.mini-stat,
+.floating-tag {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    background: rgba(12, 18, 24, 0.7);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.18);
+}
+
+.mini-stat {
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.mini-stat span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--accent);
+}
+
+.mini-stat small,
+.floating-tag small {
+    color: var(--muted);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.floating-tag {
+    right: 1rem;
+    bottom: 4.1rem;
+}
+
+.floating-tag strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
 .visual-grid {
     position: absolute;
     inset: 0;
@@ -410,6 +478,55 @@ h2 em {
     border-radius: 999px;
     text-align: center;
     background: rgba(255, 255, 255, 0.03);
+}
+
+.feature-visuals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding: 0 4.5vw 0;
+    margin-top: 1.5rem;
+}
+
+.media-card {
+    position: relative;
+    min-height: 18rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 1.6rem;
+    box-shadow: var(--shadow);
+    background-size: cover;
+    background-position: center;
+}
+
+.media-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 12, 15, 0.22), rgba(8, 12, 15, 0.82));
+}
+
+.media-card-one {
+    background-image: url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=900&q=80');
+}
+
+.media-card-two {
+    background-image: url('https://images.unsplash.com/photo-1529074963764-98f545c6a2e2?auto=format&fit=crop&w=900&q=80');
+}
+
+.media-card-three {
+    background-image: url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=900&q=80');
+}
+
+.media-copy {
+    position: absolute;
+    inset: auto 1.2rem 1.2rem 1.2rem;
+    z-index: 1;
+}
+
+.media-copy h3 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    line-height: 0.95;
 }
 
 .catalog-section,
@@ -622,8 +739,143 @@ h2 {
     color: var(--text);
 }
 
+.order-panel {
+    display: grid;
+    gap: 1rem;
+    align-self: start;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 1.75rem;
+    background: linear-gradient(180deg, rgba(19, 29, 38, 0.96), rgba(10, 15, 20, 0.98));
+    box-shadow: var(--shadow);
+}
+
+.order-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.order-panel-header .eyebrow {
+    margin-bottom: 0;
+}
+
+.mini-button {
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cart-items {
+    display: grid;
+    gap: 0.75rem;
+    min-height: 6rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cart-item strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+}
+
+.cart-item span {
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.empty-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
+    margin: 0;
+    border: 1px dashed var(--line);
+    border-radius: 1rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.quote-box {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(247, 185, 85, 0.22);
+    background: rgba(247, 185, 85, 0.05);
+}
+
+.quote-box span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.quote-box strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+}
+
+.quote-box small {
+    color: var(--surface);
+    line-height: 1.5;
+}
+
+.totals {
+    display: grid;
+    gap: 0.8rem;
+    padding-top: 0.25rem;
+}
+
+.totals div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--surface);
+}
+
+.totals span {
+    color: var(--muted);
+}
+
+.total-line {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+    font-size: 1.1rem;
+}
+
 .wide {
     width: 100%;
+}
+
+.order-panel.open {
+    border-color: rgba(247, 185, 85, 0.35);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 .confidence-section {
@@ -700,7 +952,8 @@ h2 {
     .product-grid,
     .advantage-grid,
     .confidence-list,
-    .logo-band {
+    .logo-band,
+    .feature-visuals {
         grid-template-columns: 1fr;
     }
 
@@ -746,7 +999,8 @@ h2 {
     .advantages-section,
     .config-section,
     .confidence-section,
-    .site-footer {
+    .site-footer,
+    .feature-visuals {
         padding-inline: 1rem;
     }
 
