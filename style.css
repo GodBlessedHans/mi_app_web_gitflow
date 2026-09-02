@@ -348,35 +348,6 @@ h2 em {
         linear-gradient(180deg, #121c27 0%, #0c141d 100%);
 }
 
-.orbit { position: absolute; border: 1px solid rgba(247, 185, 85, 0.16); border-radius: 999px; transform: rotate(-25deg); }
-.orbit-one { width: 36rem; height: 15rem; top: 9rem; right: -11rem; }
-.orbit-two { width: 27rem; height: 10rem; top: 14rem; right: -5rem; border-color: rgba(137, 216, 167, 0.2); }
-
-.controller-render {
-    position: absolute;
-    z-index: 1;
-    top: 6.8rem;
-    left: 50%;
-    width: 19.5rem;
-    height: 16rem;
-    transform: translateX(-50%) rotate(-7deg);
-    border: 1px solid rgba(222, 236, 243, 0.24);
-    border-radius: 2.2rem 2.2rem 3.7rem 3.7rem;
-    background: linear-gradient(135deg, #405362, #1b2a36 50%, #101b25);
-    box-shadow: -1.1rem 1.4rem 0 rgba(0, 0, 0, 0.24), 1.4rem 2.2rem 5rem rgba(0, 0, 0, 0.44);
-}
-
-.controller-render::before { content: ""; position: absolute; inset: 0.8rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 1.8rem 1.8rem 3rem 3rem; }
-.controller-base { position: absolute; z-index: -1; bottom: -2rem; left: 2.1rem; width: 15rem; height: 3rem; border-radius: 0 0 2rem 2rem; background: linear-gradient(180deg, #17232d, #081016); transform: skewX(-10deg); }
-.antenna { position: absolute; top: -4rem; width: 0.5rem; height: 5rem; border-radius: 999px; background: linear-gradient(90deg, #0b1014, #485a65, #0a1014); transform-origin: bottom; }
-.antenna-left { left: 2.8rem; transform: rotate(-20deg); }.antenna-right { right: 2.8rem; transform: rotate(20deg); }
-.controller-screen { position: absolute; top: 2.2rem; left: 50%; width: 6rem; height: 2.65rem; padding: 0.45rem; transform: translateX(-50%); border: 1px solid #638a86; border-radius: 0.4rem; background: #102629; box-shadow: inset 0 0 1.5rem rgba(93, 230, 188, 0.18); color: #a9f7cf; font: 0.48rem "IBM Plex Mono", monospace; }
-.controller-screen i { display:block; width: 60%; height: 0.2rem; margin-bottom: 0.32rem; background:#a9f7cf; }.controller-screen b { font-weight: 500; }
-.stick { position: absolute; top: 7.4rem; width: 3.8rem; height: 3.8rem; border: 0.5rem solid #1b2831; border-radius: 50%; background: radial-gradient(circle at 47% 42%, #5f7784 0 20%, #15232c 23% 53%, #080d11 56%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
-.stick::after { content:""; position:absolute; top: 0.45rem; left: 1.18rem; width: 0.9rem; height: 1.8rem; border-radius: 0.8rem; background: linear-gradient(90deg, #607b89, #1b2932); transform: rotate(12deg); }.stick-left { left: 2.1rem; }.stick-right { right: 2.1rem; }
-.controller-switch { position:absolute; top: 1.65rem; width: 0.52rem; height: 1.8rem; border-radius: 0.5rem; background:#71828c; box-shadow: 0 0 0 0.16rem #10191f; }.switch-one { left: 2.5rem; }.switch-two { right: 2.5rem; }
-.render-label { position:absolute; color: var(--muted); font: 0.58rem "IBM Plex Mono", monospace; letter-spacing: .12em; white-space:nowrap; }.label-left { top: 4.5rem; left: -4rem; }.label-right { right: -4rem; bottom: 2rem; color: var(--accent); }
-
 .visual-grid {
     position: absolute;
     inset: 0;
@@ -468,8 +439,6 @@ h2 em {
     text-align: center;
     background: rgba(255, 255, 255, 0.03);
 }
-
-.logo-band b { margin-right: 0.45rem; color: var(--accent); font-weight: 500; }
 
 .catalog-section,
 .advantages-section,
@@ -693,10 +662,13 @@ h2 {
     color: var(--text);
 }
 
-.config-result { margin: 0; min-height: 2.8rem; padding: 0.9rem 1rem; border-left: 2px solid var(--accent); color: var(--muted); background: rgba(255,255,255,.035); font-size: .82rem; line-height: 1.5; }
-
 .wide {
     width: 100%;
+}
+
+.order-panel.open {
+    border-color: rgba(247, 185, 85, 0.35);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 .confidence-section {
@@ -773,7 +745,8 @@ h2 {
     .product-grid,
     .advantage-grid,
     .confidence-list,
-    .logo-band {
+    .logo-band,
+    .feature-visuals {
         grid-template-columns: 1fr;
     }
 
@@ -821,7 +794,8 @@ h2 {
     .advantages-section,
     .config-section,
     .confidence-section,
-    .site-footer {
+    .site-footer,
+    .feature-visuals {
         padding-inline: 1rem;
     }
 

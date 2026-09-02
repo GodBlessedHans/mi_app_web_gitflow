@@ -69,20 +69,6 @@
 
             <div class="hero-visual">
                 <div class="visual-grid"></div>
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="controller-render" aria-hidden="true">
-                    <span class="render-label label-left">HALL SENSOR</span>
-                    <span class="render-label label-right">T18 / COMMAND</span>
-                    <span class="antenna antenna-left"></span>
-                    <span class="antenna antenna-right"></span>
-                    <span class="controller-screen"><i></i><b>ALT HOLD</b></span>
-                    <span class="stick stick-left"></span>
-                    <span class="stick stick-right"></span>
-                    <span class="controller-switch switch-one"></span>
-                    <span class="controller-switch switch-two"></span>
-                    <span class="controller-base"></span>
-                </div>
                 <div class="status-card">
                     <span class="status-kicker">Seleccion del mes</span>
                     <strong>Falcon T18 Command</strong>
@@ -101,6 +87,27 @@
             <span><b>02</b> Comparador visual de sticks</span>
             <span><b>03</b> Pagos seguros</span>
             <span><b>04</b> Asesoria de compatibilidad</span>
+        </section>
+
+        <section class="feature-visuals" aria-label="Imágenes de productos destacados">
+            <article class="media-card media-card-one">
+                <div class="media-copy">
+                    <p class="eyebrow">SIMULACION</p>
+                    <h3>Cabinas de alta precision</h3>
+                </div>
+            </article>
+            <article class="media-card media-card-two">
+                <div class="media-copy">
+                    <p class="eyebrow">RC AVANZADO</p>
+                    <h3>Maniobra agresiva</h3>
+                </div>
+            </article>
+            <article class="media-card media-card-three">
+                <div class="media-copy">
+                    <p class="eyebrow">PORTATIL</p>
+                    <h3>Setups compactos</h3>
+                </div>
+            </article>
         </section>
 
         <section class="catalog-section" id="catalogo">
@@ -239,31 +246,56 @@
             <form class="config-card" id="configForm">
                 <label>
                     Tipo de uso
-                    <select id="useCase">
-                        <option value="sim">Simulacion de vuelo</option>
-                        <option value="rc">Aeronave RC avanzada</option>
-                        <option value="training">Entrenamiento tecnico</option>
+                    <select>
+                        <option>Simulacion de vuelo</option>
+                        <option>Aeronave RC avanzada</option>
+                        <option>Entrenamiento tecnico</option>
                     </select>
                 </label>
                 <label>
                     Canales deseados
-                    <select id="channels">
-                        <option value="8">8 canales</option>
-                        <option value="12">12 canales</option>
-                        <option value="18">18 canales</option>
+                    <select>
+                        <option>8 canales</option>
+                        <option>12 canales</option>
+                        <option>18 canales</option>
                     </select>
                 </label>
                 <label>
                     Presupuesto
-                    <select id="budget">
-                        <option value="entry">Hasta USD 200</option>
-                        <option value="mid">USD 200 a 350</option>
-                        <option value="pro">Mas de USD 350</option>
+                    <select>
+                        <option>Hasta USD 200</option>
+                        <option>USD 200 a 350</option>
+                        <option>Mas de USD 350</option>
                     </select>
                 </label>
                 <button type="button" class="button button-primary wide">Recibir recomendacion</button>
-                <p class="config-result" id="configResult" aria-live="polite">Selecciona tu escenario y te diremos el modelo con mejor equilibrio.</p>
             </form>
+
+            <aside class="order-panel" id="orderPanel" aria-live="polite">
+                <div class="order-panel-header">
+                    <p class="eyebrow">RESUMEN DEL PEDIDO</p>
+                    <button type="button" class="mini-button" id="clearCart">Vaciar</button>
+                </div>
+
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Aun no has seleccionado articulos.</p>
+                </div>
+
+                <div class="quote-box" id="recommendationBox">
+                    <span>Recomendacion</span>
+                    <strong id="recommendationTitle">Vector V12 Range</strong>
+                    <small id="recommendationText">Ideal para RC avanzado con 12 canales.</small>
+                </div>
+
+                <div class="totals">
+                    <div><span>Subtotal</span><strong id="subtotalValue">USD 0</strong></div>
+                    <div><span>Envio</span><strong id="shippingValue">USD 0</strong></div>
+                    <div><span>Descuento</span><strong id="discountValue">-USD 0</strong></div>
+                    <div class="total-line"><span>Total</span><strong id="totalValue">USD 0</strong></div>
+                </div>
+
+                <button type="button" class="button button-primary wide" id="checkoutButton">Solicitar cotizacion</button>
+            </aside>
         </section>
 
         <section class="confidence-section" id="confianza">
